@@ -15,10 +15,14 @@ Open a new terminal clicking terminal on the top and then clicking new terminal.
 ![image](Loggingin.png)
 # Now that we're logged in we can start having fun a mess with code!
 1. Try inputting certain commands like:
->Blockquote cd : this pulls you into a specific directory/file or it can lead you to a previous file if empty`
->Blockquote ls -lat : tells you when these file were made?`
->Blockquote ls -a list all the files in your current system`
->Blockquote ls <directory> : tells you the current directory you are in?`
+
+`cd : this pulls you into a specific directory/file or it can lead you to a previous file if empty`
+
+` ls -lat : tells you when these file were made?`
+
+` ls -a list all the files in your current system`
+
+` ls <directory> : tells you the current directory you are in?`
 2. After typing these you should expect a lot of different outputs.
 Try messing around with the input too!
 ![image](tryingcommands.png)
