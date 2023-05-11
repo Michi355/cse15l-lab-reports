@@ -1,6 +1,7 @@
 # hello! Lab Report 2: Servers and bugs (ew bugs! XP)
 ## Part 1 :p
 The code below is the code for our String Server program:
+
 ` import java.io.IOException;`
 
 ` import java.net.URI;`
