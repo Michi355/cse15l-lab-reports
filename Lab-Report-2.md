@@ -89,8 +89,9 @@ The code below is the code for our String Server program:
        
 (I ended up coding a search method cause I thought it was required....and then it wasn't.)
 First we must compile the code so this program can even run/work at all as well as the code for Server.java. We compile the code using *javac StringServer.java Server.java*.
-and voila! we have compiled the code! Now we can run it using java StringServer (along with the parameters it requires such as the port number of course).
 ![image](CompiledAndRan.png)
+
+and voila! we have compiled the code! Now we can run it using java StringServer (along with the parameters it requires such as the port number of course).
 
 Now once we insert the port number we can create our own server! (basically a very empty website lol). And the creation of this server can be attributed to the code below:
 ![image](WebsiteCodeStarted.png)
