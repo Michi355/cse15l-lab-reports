@@ -4,14 +4,10 @@ The code below is the code for our String Server program:
 
 `import java.io.IOException;
 import java.net.URI;
-
-
 class Handler implements URLHandler {
    // The one bit of state on the server: a number that will be manipulated by
    // various requests.
    String word=" ";
-
-
    public String handleRequest(URI url) {
        if (url.getPath().equals("/")) {
            return word;
@@ -40,8 +36,6 @@ class Handler implements URLHandler {
        }  
    }
 }
-
-
 class StringServer {
    public static void main(String[] args) throws IOException {
        if(args.length == 0){
@@ -54,8 +48,7 @@ class StringServer {
 
 
        Server.start(port, new Handler());
-   }
-}`
+  `
 (I ended up coding a search method cause I thought it was required....and then it wasn't.)
 First we must compile the code so this program can even run/work at all as well as the code for Server.java. We compile the code using *javac StringServer.java Server.java*.
 and voila! we have compiled the code! Now we can run it using java StringServer (along with the parameters it requires such as the port number of course).
