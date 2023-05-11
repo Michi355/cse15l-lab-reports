@@ -131,18 +131,22 @@ Now lets concatonate another word! And this is the result:
 
 ## yaaayyy! Now on to part 2! Debugging :( booooo!
 1. Failure Inducing Input: 
+2. 
 `@Test
 public void testReverseInPlace2(){
    int[] input1={1,2,4};
    ArrayExamples.reverseInPlace(input1);
    assertArrayEquals(new int[]{4,2,1},input1);
   }`
+  
 Plus the associated code!:
+
 `static void reverseInPlace(int[] arr){
    for (int i=0;i<arr.length/2;i++){
       arr[i]=arr[arr.length-i-1];
       }
    }`
+   
 When we try run our test we get this error:
 
 ![image](dawrongtest.png)
@@ -153,6 +157,7 @@ But if we try to run a test with only one number we get this:
 
 As we saw in the associated code above, when we look at the condition of the `for loop` we notice that we only cover half of the of the integer list instead of all of it. This means we aren't able to copy the entire list but just one half of it. 
 In order to fix this we need to add a place holder! This place holder is used to store an element (at a specific index) which then allows us to change the index of the place holder, also changing the index of that certain element! wow! so genius! (im running on caffiene right now)
+
 `static void reverseInPlace(int[] arr){
    for (int i=0;i<arr.length/2;i++){
       int temp=arr[i];
