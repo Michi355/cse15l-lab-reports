@@ -113,12 +113,15 @@ Now, let us add some strings into our empty list! To do this we will write *add-
 ![image](1stwordadded.png)
 
 This is the result of the following code (which adds the string after *s=* into the string variable *word*:
+
 ` String word=" "; `
    `public String handleRequest(URI url) {`
        `if (url.getPath().equals("/")) {`
            `return word;`
       `}`
+      
 This is now our NEW website/server (it contains a silly word now lol)!
+
 ![image](yay1stword.png)
 
 Now lets concatonate another word! And this is the result:
