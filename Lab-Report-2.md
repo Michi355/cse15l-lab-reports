@@ -2,14 +2,23 @@
 ## Part 1 :p
 The code below is the code for our String Server program:
 ` import java.io.IOException;`
+
 ` import java.net.URI;`
+
 ` class Handler implements URLHandler {`
+
   ` // The one bit of state on the server: a number that will be manipulated by`
+  
    `// various requests.`
+   
    `String word=" ";`
+   
    `public String handleRequest(URI url) {`
+   
        `if (url.getPath().equals("/")) {`
+       
            `return word;`
+           
        `}`
        `else {`
            `System.out.println("Path: " + url.getPath());`
