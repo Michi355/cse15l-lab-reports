@@ -74,3 +74,33 @@ This is now our NEW website/server (it contains a silly word now lol)!
 Now lets concatonate another word! And this is the result:
 **insert image
 **insert image
+## yaaayyy! Now on to part 2! Debugging :( booooo!
+1. Failure Inducing Input: 
+'@Test
+public void testReverseInPlace2(){
+   int[] input1={1,2,4};
+   ArrayExamples.reverseInPlace(input1);
+   assertArrayEquals(new int[]{4,2,1},input1);
+  }'
+Plus the associated code!:
+'static void reverseInPlace(int[] arr){
+   for (int i=0;i<arr.length/2;i++){
+      arr[i]=arr[arr.length-i-1];
+      }
+   }'
+When we try run our test we get this error:
+**insert image
+But if we try to run a test with only one number we get this:
+**insert image
+As we saw in the associated code above, when we look at the condition of the 'for loop' we notice that we only cover half of the of the integer list instead of all of it. This means we aren't able to copy the entire list but just one half of it. 
+In order to fix this we need to add a place holder! This place holder is used to store an element (at a specific index) which then allows us to change the index of the place holder, also changing the index of that certain element! wow! so genius! (im running on caffiene right now)
+'static void reverseInPlace(int[] arr){
+   for (int i=0;i<arr.length/2;i++){
+      int temp=arr[i];
+      arr[i]=arr[arr.length-i-1];
+      arr[arr.length-1]=temp;
+      }
+   }
+**image
+## Now finally for Part 3 (please im so eepy rn D: ):
+I learned a LOT in our lab from week 2 and 3. I learned how to compile and run code and why that's even a thing. I learned what bash was and realized that there are different types of terminals! And I also learned about the directories and paths and how to use them in my own coding. Bbut most importantly, I learned how to use 'tab', this thing has saved me SO much time, I wish I could give it a big hug.
