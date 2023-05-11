@@ -1,52 +1,48 @@
 # hello! Lab Report 2: Servers and bugs (ew bugs! XP)
 ## Part 1 :p
 The code below is the code for our String Server program:
-`
-import java.io.IOException;
-import java.net.URI;
-class Handler implements URLHandler {
-   // The one bit of state on the server: a number that will be manipulated by
-   // various requests.
-   String word=" ";
-   public String handleRequest(URI url) {
-       if (url.getPath().equals("/")) {
-           return word;
-       }
-       else {
-           System.out.println("Path: " + url.getPath());
-           if (url.getPath().contains("/add-message")) {
-               String[] parameters = url.getQuery().split("=");
-               if (parameters[0].equals("s")) {
-                   word += (parameters[1])+"\n";
-                   return String.format("%s was successfully added!", parameters[1]);
-               }
-           }
-           else if(url.getPath().contains("/search")){
-               String[] parameters=url.getQuery().split("=");
-               String wordFound= new String();
-               if (parameters[0].equals("s")){
-                   String[] find= word.split("\n");
-                   for (int i=0; i<find.length;i++){
-                       if (find[i].contains(parameters[1])){
-                           wordFound+=find[i]+"\n";
-                       }
-                   }return wordFound;
-               }
-           }return "404 Not Found!";
-       }  
-   }
-}
-class StringServer {
-   public static void main(String[] args) throws IOException {
-       if(args.length == 0){
-           System.out.println("Missing port number! Try any number between 1024 to 49151");
-           return;
-       }
-
-
+` import java.io.IOException;`
+` import java.net.URI;`
+` class Handler implements URLHandler {`
+  ` // The one bit of state on the server: a number that will be manipulated by`
+   `// various requests.`
+   `String word=" ";`
+   `public String handleRequest(URI url) {`
+       `if (url.getPath().equals("/")) {`
+           `return word;`
+       `}`
+       `else {`
+           `System.out.println("Path: " + url.getPath());`
+           `if (url.getPath().contains("/add-message")) {`
+               `String[] parameters = url.getQuery().split("=");`
+               `if (parameters[0].equals("s")) {`
+                   `word += (parameters[1])+"\n";`
+                   `return String.format("%s was successfully added!", parameters[1]);`
+               `}`
+           `}`
+           `else if(url.getPath().contains("/search")){`
+               `String[] parameters=url.getQuery().split("=");`
+               `String wordFound= new String();`
+               `if (parameters[0].equals("s")){`
+                   `String[] find= word.split("\n");`
+                   `for (int i=0; i<find.length;i++){`
+                       `if (find[i].contains(parameters[1])){`
+                           `wordFound+=find[i]+"\n";`
+                       `}`
+                   `}return wordFound;`
+               `}`
+           `}return "404 Not Found!";`
+       `}`
+   `}`
+`}`
+`class StringServer {
+   `public static void main(String[] args) throws IOException {
+       `if(args.length == 0){
+           `System.out.println("Missing port number! Try any number between 1024 to 49151");
+           `return;
+       `}
        int port = Integer.parseInt(args[0]);
-
-
+       
        Server.start(port, new Handler());
   `
 (I ended up coding a search method cause I thought it was required....and then it wasn't.)
