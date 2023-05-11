@@ -20,40 +20,72 @@ The code below is the code for our String Server program:
            `return word;`
            
        `}`
-       `else {`
-           `System.out.println("Path: " + url.getPath());`
-           `if (url.getPath().contains("/add-message")) {`
-               `String[] parameters = url.getQuery().split("=");`
-               `if (parameters[0].equals("s")) {`
-                   `word += (parameters[1])+"\n";`
-                   `return String.format("%s was successfully added!", parameters[1]);`
-               `}`
-           `}`
-           `else if(url.getPath().contains("/search")){`
-               `String[] parameters=url.getQuery().split("=");`
-               `String wordFound= new String();`
-               `if (parameters[0].equals("s")){`
-                   `String[] find= word.split("\n");`
-                   `for (int i=0; i<find.length;i++){`
-                       `if (find[i].contains(parameters[1])){`
-                           `wordFound+=find[i]+"\n";`
-                       `}`
-                   `}return wordFound;`
-               `}`
-           `}return "404 Not Found!";`
-       `}`
-   `}`
-`}`
-`class StringServer {
-   `public static void main(String[] args) throws IOException {
-       `if(args.length == 0){
-           `System.out.println("Missing port number! Try any number between 1024 to 49151");
-           `return;
-       `}
-       int port = Integer.parseInt(args[0]);
        
-       Server.start(port, new Handler());
-  `
+       `else {`
+       
+           `System.out.println("Path: " + url.getPath());`
+           
+           `if (url.getPath().contains("/add-message")) {`
+           
+               `String[] parameters = url.getQuery().split("=");`
+               
+               `if (parameters[0].equals("s")) {`
+               
+                   `word += (parameters[1])+"\n";`
+                   
+                   `return String.format("%s was successfully added!", parameters[1]);`
+                   
+               `}`
+               
+           `}`
+           
+           `else if(url.getPath().contains("/search")){`
+           
+               `String[] parameters=url.getQuery().split("=");`
+               
+               `String wordFound= new String();`
+               
+               `if (parameters[0].equals("s")){`
+               
+                   `String[] find= word.split("\n");`
+                   
+                   `for (int i=0; i<find.length;i++){`
+                   
+                       `if (find[i].contains(parameters[1])){`
+                       
+                           `wordFound+=find[i]+"\n";`
+                           
+                       `}`
+                       
+                   `}return wordFound;`
+                   
+               `}`
+               
+           `}return "404 Not Found!";`
+           
+       `}`
+       
+   `}`
+   
+`}`
+
+`class StringServer {`
+
+   `public static void main(String[] args) throws IOException {`
+   
+       `if(args.length == 0){`
+       
+           `System.out.println("Missing port number! Try any number between 1024 to 49151");`
+           
+           `return;`
+           
+       `}`
+       
+       int port = Integer.parseInt(args[0]);`
+       
+       
+       Server.start(port, new Handler());`
+       
 (I ended up coding a search method cause I thought it was required....and then it wasn't.)
 First we must compile the code so this program can even run/work at all as well as the code for Server.java. We compile the code using *javac StringServer.java Server.java*.
 and voila! we have compiled the code! Now we can run it using java StringServer (along with the parameters it requires such as the port number of course).
