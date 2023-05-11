@@ -94,13 +94,15 @@ First we must compile the code so this program can even run/work at all as well 
 
 and voila! we have compiled the code! Now we can run it using java StringServer (along with the parameters it requires such as the port number of course).
 
+![image](WebsiteCodeStarted.png)
+
 Now once we insert the port number we can create our own server! (basically a very empty website lol). And the creation of this server can be attributed to the code below:
 
-![image](WebsiteCodeStarted.png)
+![image](ServerStarter.png)
 
 Now once we start the server we can open it and see that it is completely empty D:! This is because of the following code which establishes the empty display:
 
-![image](ServerStarter.png)
+![image](um.png)
 
 This is the server that was started! 
 
