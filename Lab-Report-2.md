@@ -57,7 +57,7 @@ class StringServer {
    }
 }`
 (I ended up coding a search method cause I thought it was required....and then it wasn't.)
-First we must compile the code so this program can even run/work at all as well as the code for Server.java. We compile the code using `javac StringServer.java Server.java`.
+First we must compile the code so this program can even run/work at all as well as the code for Server.java. We compile the code using ` javac StringServer.java Server.java`.
 and voila! we have compiled the code! Now we can run it using java StringServer (along with the parameters it requires such as the port number of course).
 ![image](CompiledAndRan.png)
 Now once we insert the port number we can create our own server! (basically a very empty website lol). And the creation of this server can be attributed to the code below:
@@ -66,10 +66,10 @@ Now once we start the server we can open it and see that it is completely empty 
 ![image](ServerStarter.png)
 This is the server that was started! 
 ![image](WebsiteStarted.png)
-Now, let us add some strings into our empty list! To do this we will write `add-message?s=` into our URL.
+Now, let us add some strings into our empty list! To do this we will write ` add-message?s=` into our URL.
 ![image](1stwordadded.png)
-This is the result of the following code (which adds the string after `s=` into the string variable `word`:
-`String word=" ";
+This is the result of the following code (which adds the string after ` s=` into the string variable ` word`:
+` String word=" ";
 
 
    public String handleRequest(URI url) {
