@@ -131,7 +131,7 @@ Now lets concatonate another word! And this is the result:
 
 ## yaaayyy! Now on to part 2! Debugging :( booooo!
 1. Failure Inducing Input: 
-2. 
+
 `@Test
 public void testReverseInPlace2(){
    int[] input1={1,2,4};
