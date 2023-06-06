@@ -39,4 +39,4 @@ This was the final code I ended up writing:
   
   # Reflection
   One of the best things that my tutor taught was the use of SCP. I don't have a personal laptop so I move from PC to PC and scp really helps me edit files in visual studio code using my ssh! 
-  It is very convenient and I was told I'd be using it a lot in cse 30, so I am grateful yet also amazed at how there is a specific thing for almost anything in coding!
+  It is very convenient and I was told I'd be using it a lot in cse 30, so I am grateful yet also amazed at how there is a specific thing for almost anything in coding! Though actually writing the commands and everything for SCP can be quite tedious.
